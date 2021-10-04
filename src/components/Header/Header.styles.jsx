@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 70px;
+  height: 60px;
   width: 100vw;
   border-bottom: 1px solid lightgray;
 `;
@@ -10,7 +10,8 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 35px;
+  margin: 0px 35px;
+  margin-top: 10px;
 `;
 
 export const Left = styled.div`
