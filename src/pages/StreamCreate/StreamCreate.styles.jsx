@@ -38,8 +38,8 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const Span = styled.span `
-    font-size: 14px;
-    color: crimson;
-    margin-bottom: 40px;
-`
+export const Span = styled.span`
+  font-size: 14px;
+  color: crimson;
+  margin-bottom: 40px;
+`;

@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+//Redux
 import { Field, reduxForm } from "redux-form";
+import { connect } from "react-redux";
+import { createStream } from "../../redux/actions";
+//Styled
 import {
   Button,
   Container,
@@ -9,9 +13,7 @@ import {
   Span,
 } from "./StreamCreate.styles";
 
-
 export class StreamCreate extends Component {
-    
   renderInput({ input, label, meta }) {
     return (
       <>
@@ -22,8 +24,8 @@ export class StreamCreate extends Component {
     );
   }
 
-  onSubmit(formValues) {
-    console.log(formValues);
+  onSubmit = (formValues) => {
+    this.props.createStream(formValues);
   }
 
   render() {
@@ -48,20 +50,22 @@ export class StreamCreate extends Component {
 }
 
 const validate = (formValues) => {
-    const errors = {};
+  const errors = {};
 
-    if (!formValues.title) {
-        errors.title = "You must enter a title!"
-    }
+  if (!formValues.title) {
+    errors.title = "You must enter a title!";
+  }
 
-    if (!formValues.description) {
-        errors.description = "You must enter a description!"
-    }
+  if (!formValues.description) {
+    errors.description = "You must enter a description!";
+  }
 
-    return errors;
-}
+  return errors;
+};
 
-export default reduxForm({
+const formWrapped = reduxForm({
   form: "streamCreate",
-  validate
+  validate,
 })(StreamCreate);
+
+export default connect(null, { createStream })(formWrapped);
