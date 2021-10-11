@@ -1,4 +1,4 @@
-import { formValues } from "redux-form";
+import history from "../../history";
 import streams from "../../apis/streams";
 
 export const signIn = (userId) => {
@@ -14,12 +14,18 @@ export const signOut = () => {
   };
 };
 
-export const createStream = (formValues) => async (dispatch) => {
-  const response = await streams.post("/streams", formValues);
+export const createStream = (formValues) => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await streams.post("/streams", { ...formValues, userId });
+
   dispatch({
     type: "CREATE_STREAM",
     payload: response.data,
   });
+
+  //After response success pushing path to "/" and forcing to go "0"
+  history.push("/")
+  history.go(0)
 };
 
 export const fetchStreams = () => async (dispatch) => {

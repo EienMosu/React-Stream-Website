@@ -1,16 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//Pages
 import Header from "./components/Header";
+import StreamList from "./pages/StreamList";
+import StreamShow from "./pages/StreamShow";
 import StreamCreate from "./pages/StreamCreate";
 import StreamDelete from "./pages/StreamDelete";
 import StreamEdit from "./pages/StreamEdit";
-//Pages
-import StreamList from "./pages/StreamList";
-import StreamShow from "./pages/StreamShow";
+//CustomHistory
+import history from "./history";
 
 const App = () => {
   return (
-    <Router>
+    <Router history={history}>
       <Header />
       <Routes>
         <Route path="/" element={<StreamList />} />

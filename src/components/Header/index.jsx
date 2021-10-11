@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import GoogleAuth from "../GoogleAuth";
 import {
   Container,
@@ -18,7 +19,9 @@ const Header = () => {
           <Page>Pages</Page>
         </Left>
         <Middle>
-          <Logo>Stream</Logo>
+          <Link to="/">
+            <Logo>Stream</Logo>
+          </Link>
         </Middle>
         <Right>
           <GoogleAuth />

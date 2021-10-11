@@ -10,6 +10,7 @@ import {
   Form,
   Input,
   Label,
+  PageTitle,
   Span,
 } from "./StreamCreate.styles";
 
@@ -31,6 +32,7 @@ export class StreamCreate extends Component {
   render() {
     return (
       <Container>
+        <PageTitle>Create Stream</PageTitle>
         <Form onSubmit={this.props.handleSubmit(this.onSubmit)}>
           <Field
             name="title"
