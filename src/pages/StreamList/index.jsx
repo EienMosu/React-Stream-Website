@@ -27,7 +27,6 @@ class StreamList extends Component {
   }
 
   render() {
-    console.log(this.props.currentUserId);
     return (
       <Container>
         <PageTitle>Streams</PageTitle>
@@ -37,16 +36,16 @@ class StreamList extends Component {
               <Left>
                 <Icon src={icon} />
               </Left>
-              <Middle key={stream.id}>
+              <Middle>
                 <Title>{stream.title}</Title>
                 <Desc>{stream.description}</Desc>
               </Middle>
               {this.props.currentUserId === stream.userId && (
                 <Right>
-                  <Link to="/streams/edit">
+                  <Link to={`/streams/edit/${stream.id}`}>
                     <Button color="blue">Edit</Button>
                   </Link>
-                  <Link to="/streams/delete">
+                  <Link to={`/streams/delete/${stream.id}`}>
                     <Button color="darkred">Delete</Button>
                   </Link>
                 </Right>
