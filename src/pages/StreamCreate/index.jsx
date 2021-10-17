@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //Redux
 import { connect } from "react-redux";
-import { StreamForm } from "../../components/StreamForm";
+import StreamForm from "../../components/StreamForm";
 import { createStream } from "../../redux/actions";
 //Styled
 import { Container, PageTitle } from "./StreamCreate.styles";
