@@ -19,7 +19,7 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<StreamList />} />
           <Route path="/streams/create" element={<StreamCreate />} />
-          <Route path="/streams/show/:id" element={<StreamShow />} />
+          <Route path="/streams/:id" element={<StreamShow />} />
           <Route path="/streams/edit/:id" element={<StreamEdit />} />
           <Route path="/streams/delete/:id" element={<StreamDelete />} />
         </Routes>

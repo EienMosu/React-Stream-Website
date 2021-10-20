@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 60px;
+  height: 80px;
   width: 100vw;
   border-bottom: 1px solid lightgray;
 `;
@@ -14,16 +14,6 @@ export const Wrapper = styled.div`
   margin-top: 10px;
 `;
 
-export const Left = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Page = styled.span`
-  font-size: 24px;
-`;
-
 export const Middle = styled.div`
   display: flex;
   align-items: center;
@@ -31,7 +21,9 @@ export const Middle = styled.div`
 `;
 
 export const Logo = styled.h1`
-  font-size: 24px;
+  font-size: 34px;
+  color: black;
+  border-bottom: 2px solid crimson;
 `;
 
 export const Right = styled.div`

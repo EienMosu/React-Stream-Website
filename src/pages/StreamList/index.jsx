@@ -37,8 +37,13 @@ class StreamList extends Component {
                 <Icon src={icon} />
               </Left>
               <Middle>
-                <Title>{stream.title}</Title>
-                <Desc>{stream.description}</Desc>
+                <Link
+                  to={`/streams/${stream.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Title>{stream.title}</Title>
+                  <Desc>{stream.description}</Desc>
+                </Link>
               </Middle>
               {this.props.currentUserId === stream.userId && (
                 <Right>

@@ -23,7 +23,6 @@ export const Stream = styled.div`
   border: 1px solid lightgray;
   border-radius: 30px;
   padding: 40px;
-  cursor: pointer;
 `;
 
 export const Left = styled.div`
@@ -50,10 +49,24 @@ export const Middle = styled.div`
 export const Title = styled.h2`
   font-size: 32px;
   margin-bottom: 10px;
+  color: #000;
+  transition: all 0.4s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+    color: darkblue;
+  }
 `;
 
 export const Desc = styled.span`
   font-size: 24px;
+  color: #000;
+  transition: all 0.4s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+    color: darkblue;
+  }
 `;
 
 export const Right = styled.div`
